@@ -2,33 +2,69 @@ export default function Page() {
   const paw = '🐾';
   
   return (
-    <div style={{ fontFamily: 'system-ui, -apple-system, sans-serif', lineHeight: '1.6', color: '#333' }}>
+    <div style={{ fontFamily: 'system-ui, -apple-system, sans-serif', lineHeight: '1.6', color: '#333', background: '#ffffff' }}>
+      {/* Logo Placeholder */}
+      <section style={{
+        background: 'linear-gradient(135deg, #FFA500 0%, #FF8C00 100%)',
+        padding: '80px 20px',
+        textAlign: 'center',
+        minHeight: '120px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}>
+        <div style={{ 
+          width: '100%', 
+          maxWidth: '500px',
+          height: '100px',
+          background: 'rgba(255, 140, 0, 0.1)',
+          border: '2px dashed rgba(255, 140, 0, 0.3)',
+          borderRadius: '8px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: 'rgba(255, 140, 0, 0.5)',
+          fontFamily: 'Arvo, serif',
+          fontSize: '14px'
+        }}>
+          Your Logo Image URL Here
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section style={{
         background: 'linear-gradient(135deg, #FFA500 0%, #FF8C00 50%, #000 100%)',
         color: 'white',
         padding: '60px 20px',
         textAlign: 'center',
-        minHeight: '100vh',
+        minHeight: '80vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        position: 'relative',
+        overflow: 'hidden'
       }}>
-        <div style={{ marginBottom: '30px' }}>
-          <img 
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='80' fill='%23F5DEB3'/%3E%3Ccircle cx='70' cy='80' r='25' fill='%23FF8C00'/%3E%3Ccircle cx='130' cy='80' r='25' fill='%23000'/%3E%3Cpath d='M 85 75 Q 90 70 95 75' stroke='%23000' strokeWidth='2' fill='none'/%3E%3Cpath d='M 105 75 Q 110 70 115 75' stroke='%23000' strokeWidth='2' fill='none'/%3E%3Cpath d='M 100 105 Q 100 115 95 120' stroke='%23000' strokeWidth='2' fill='none'/%3E%3Cpath d='M 100 105 Q 100 115 105 120' stroke='%23000' strokeWidth='2' fill='none'/%3E%3C/svg%3E" 
-            alt="Fat Calico Logo" 
-            style={{ width: '120px', height: '120px', marginBottom: '20px' }}
-          />
-        </div>
+        <div style={{
+          position: 'absolute',
+          top: '-50%',
+          right: '-10%',
+          width: '400px',
+          height: '400px',
+          background: 'radial-gradient(circle, rgba(255, 140, 0, 0.1) 0%, transparent 70%)',
+          borderRadius: '50%',
+          pointerEvents: 'none'
+        }} />
         
         <h1 style={{
           fontSize: 'clamp(32px, 8vw, 64px)',
           fontFamily: 'Oswald, sans-serif',
           fontWeight: 'bold',
-          margin: '20px 0',
-          letterSpacing: '2px'
+          margin: '0 0 10px 0',
+          letterSpacing: '2px',
+          position: 'relative',
+          zIndex: 1
         }}>
           STOP RENTING
         </h1>
@@ -36,20 +72,31 @@ export default function Page() {
           fontSize: 'clamp(32px, 8vw, 64px)',
           fontFamily: 'Oswald, sans-serif',
           fontWeight: 'bold',
-          margin: '0 0 30px 0',
-          letterSpacing: '2px'
+          margin: '0 0 40px 0',
+          letterSpacing: '2px',
+          color: 'white',
+          position: 'relative',
+          zIndex: 1
         }}>
           START OWNING
         </h1>
         
         <p style={{
-          fontSize: 'clamp(16px, 4vw, 20px)',
+          fontSize: 'clamp(16px, 3.5vw, 18px)',
           fontFamily: 'Arvo, serif',
           maxWidth: '600px',
-          margin: '30px auto',
-          opacity: '0.95'
+          margin: '0 auto',
+          opacity: '0.95',
+          lineHeight: '1.7',
+          position: 'relative',
+          zIndex: 1
         }}>
-          Your talent deserves better than a social media algorithm. Get your professional portfolio website in one click.
+          They need to know YOU within one click.
+          <br />
+          <br />
+          Not your feed. Not your last 20 posts. YOU.
+          <br />
+          Your niche, your offer, your value.
         </p>
       </section>
 
@@ -64,49 +111,107 @@ export default function Page() {
           fontSize: 'clamp(28px, 6vw, 48px)',
           fontFamily: 'Oswald, sans-serif',
           textAlign: 'center',
-          marginBottom: '50px',
-          color: '#FF8C00'
+          marginBottom: '15px',
+          color: '#000',
+          letterSpacing: '1px'
         }}>
           THE SOCIAL MEDIA TRAP
         </h2>
         
+        <p style={{
+          fontSize: 'clamp(14px, 2.5vw, 16px)',
+          fontFamily: 'Arvo, serif',
+          textAlign: 'center',
+          marginBottom: '45px',
+          color: '#666'
+        }}>
+          Great for your audience, terrible for your business.
+        </p>
+        
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '30px',
-          marginBottom: '40px'
+          gap: '20px'
         }}>
           {[
-            { title: 'The Algorithm Trap', desc: 'The algorithm decides if your work gets seen. If it says no, you\'re invisible.' },
-            { title: 'The Distraction Factory', desc: 'Competitors and suggested content everywhere. Your work gets lost in the noise.' },
-            { title: 'The Chronological Curse', desc: 'Your best work from 2 months ago? Dead and buried under 30 new posts.' },
-            { title: 'The Identity Blur', desc: 'Personal content mixed with professional. Clients can\'t see your real niche.' },
-            { title: 'The Friction of "The Dig"', desc: 'Expecting clients to scroll and hunt for you. Most won\'t. They\'ll just leave.' },
-            { title: 'The "Hobbyist" Signal', desc: 'No portfolio = hobby vibes. Serious clients want serious infrastructure.' },
-            { title: 'The Social Paradox', desc: '2,000 followers looks small on Instagram. But on your website? You\'re a specialist.' },
-            { title: 'The Dead-End Journey', desc: 'Social apps keep people on the app. They show competitors right on your page.' },
-            { title: 'The Style Guessing Game', desc: 'Mixed vibes = client confusion. They won\'t risk hiring you if they can\'t tell your range.' },
-            { title: 'The One-Hit-Wonder Machine', desc: 'Great content gets buried. The algorithm judges by likes, not quality.' }
+            { 
+              title: 'The Algorithm Trap', 
+              desc: 'The algorithm decides if your work gets seen. If it says no, you\'re invisible to potential clients.'
+            },
+            { 
+              title: 'The Distraction Factory', 
+              desc: 'Surrounded by competitors and suggested content. Your work gets lost in the noise.'
+            },
+            { 
+              title: 'The Chronological Curse', 
+              desc: 'Your best work from 2 months ago is dead. Buried under 30 new posts.'
+            },
+            { 
+              title: 'The Identity Blur', 
+              desc: 'Personal content mixed with professional. Clients can\'t see your real niche.'
+            },
+            { 
+              title: 'The Friction of "The Dig"', 
+              desc: 'Clients won\'t scroll and hunt for you. Most will just leave.'
+            },
+            { 
+              title: 'The "Hobbyist" Signal', 
+              desc: 'No portfolio = hobby vibes. Serious clients want serious infrastructure.'
+            },
+            { 
+              title: 'The Social Paradox', 
+              desc: '2,000 followers looks small on Instagram. On your website? You\'re a Creative Specialist.'
+            },
+            { 
+              title: 'The Dead-End Journey', 
+              desc: 'Apps show competitors right on your page. What makes you better than them?'
+            },
+            { 
+              title: 'The Style Guessing Game', 
+              desc: 'Mixed vibes = client confusion. They won\'t risk hiring you if they can\'t tell your range.'
+            },
+            { 
+              title: 'The One-Hit-Wonder Machine', 
+              desc: 'The algorithm judges by likes, not quality. Your masterpiece gets buried.'
+            }
           ].map((problem, idx) => (
             <div key={idx} style={{
               background: '#f9f9f9',
-              padding: '25px',
+              padding: '20px',
               borderRadius: '8px',
-              borderLeft: '4px solid #FF8C00'
+              border: '2px solid rgba(255, 140, 0, 0.2)',
+              borderLeft: '5px solid #FF8C00',
+              transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
+              cursor: 'pointer',
+              boxShadow: '0 8px 20px rgba(0, 0, 0, 0.05)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-6px)';
+              e.currentTarget.style.boxShadow = '0 15px 35px rgba(255, 140, 0, 0.2)';
+              e.currentTarget.style.borderColor = 'rgba(255, 140, 0, 0.4)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.05)';
+              e.currentTarget.style.borderColor = 'rgba(255, 140, 0, 0.2)';
             }}>
               <h3 style={{
-                fontSize: 'clamp(16px, 3vw, 18px)',
+                fontSize: 'clamp(15px, 2.5vw, 17px)',
                 fontFamily: 'Oswald, sans-serif',
-                marginBottom: '12px',
-                color: '#000'
+                marginBottom: '10px',
+                color: '#000',
+                margin: '0 0 10px 0'
               }}>
-                {paw} {problem.title}
+                {problem.title}
               </h3>
               <p style={{
-                fontSize: 'clamp(14px, 2.5vw, 16px)',
+                fontSize: 'clamp(13px, 2.2vw, 14px)',
                 fontFamily: 'Arvo, serif',
-                color: '#666'
+                color: '#666',
+                margin: '0',
+                lineHeight: '1.5'
               }}>
+                <span style={{ marginRight: '8px' }}>🐾</span>
                 {problem.desc}
               </p>
             </div>
@@ -118,34 +223,29 @@ export default function Page() {
       <section style={{
         background: 'linear-gradient(135deg, #FF8C00 0%, #FFA500 100%)',
         color: 'white',
-        padding: '60px 20px',
-        textAlign: 'center'
+        padding: '50px 20px',
+        textAlign: 'center',
+        position: 'relative',
+        overflow: 'hidden'
       }}>
         <h2 style={{
-          fontSize: 'clamp(24px, 5vw, 42px)',
+          fontSize: 'clamp(24px, 5vw, 40px)',
           fontFamily: 'Oswald, sans-serif',
-          marginBottom: '20px',
-          letterSpacing: '1px'
+          marginBottom: '15px',
+          letterSpacing: '1px',
+          margin: '0 0 15px 0'
         }}>
-          YOU DON'T NEED MORE FOLLOWERS
+          You Don't Need More Followers
         </h2>
         <p style={{
-          fontSize: 'clamp(18px, 4vw, 24px)',
+          fontSize: 'clamp(16px, 3vw, 18px)',
           fontFamily: 'Arvo, serif',
-          marginBottom: '20px',
-          maxWidth: '800px',
-          margin: '20px auto'
-        }}>
-          You need a better system.
-        </p>
-        <p style={{
-          fontSize: 'clamp(16px, 3.5vw, 20px)',
-          fontFamily: 'Arvo, serif',
-          maxWidth: '800px',
+          maxWidth: '700px',
           margin: '0 auto',
-          opacity: '0.95'
+          opacity: '0.95',
+          lineHeight: '1.6'
         }}>
-          Stop letting a 48-hour algorithm dictate your worth. It's time to stop renting on social media and start owning your professional home.
+          You need a better system. Stop letting a 48-hour algorithm dictate your worth. It's time to own your professional home.
         </p>
       </section>
 
@@ -160,40 +260,44 @@ export default function Page() {
           fontSize: 'clamp(28px, 6vw, 48px)',
           fontFamily: 'Oswald, sans-serif',
           textAlign: 'center',
-          marginBottom: '50px',
-          color: '#000'
+          marginBottom: '15px',
+          color: '#000',
+          letterSpacing: '1px'
         }}>
           YOUR TALENT, CURATED & OWNED
         </h2>
         
         <p style={{
-          fontSize: 'clamp(16px, 3vw, 18px)',
+          fontSize: 'clamp(14px, 2.5vw, 16px)',
           fontFamily: 'Arvo, serif',
           textAlign: 'center',
-          marginBottom: '50px',
+          marginBottom: '45px',
           color: '#666',
           maxWidth: '900px',
-          margin: '0 auto 50px'
+          margin: '0 auto 45px',
+          lineHeight: '1.6'
         }}>
-          A clean, high-performance portfolio website that categorizes your niche and puts your top-tier work front-and-center. Every client will instantly get what you bring to the table.
+          A clean, high-performance portfolio that categorizes your niche and puts your best work front-and-center. Clients will instantly get what you bring to the table.
         </p>
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '30px'
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '20px'
         }}>
           {[
             { 
               title: 'Permanent Visibility',
+              desc: 'Your best work stays exactly where you put it. No buried posts, no chronological curse.',
               points: [
-                'Your best work stays exactly where you put it',
-                'No buried posts, no chronological curse',
+                'Your best work stays visible',
+                'No buried posts or dead links',
                 'Made today or made a year ago, it\'s always there'
               ]
             },
             { 
               title: 'Niche Categorized Navigation',
+              desc: 'Stop making clients guess. Organize by niche so they see your range instantly.',
               points: [
                 'Stop making clients guess',
                 'Organize your work by niche',
@@ -202,51 +306,81 @@ export default function Page() {
             },
             { 
               title: '"Creative Specialist" Status',
+              desc: 'Your own professional URL signals you\'re serious, not a hobbyist.',
               points: [
-                'Portfolio on your own professional URL',
+                'Portfolio on your own URL',
                 'yourname.vercel.app or yourname.com',
-                'You instantly look like a proper professional'
+                'Instant professional credibility'
               ]
             },
             { 
               title: 'Zero Distraction Environment',
+              desc: 'Clean, high-performance space. Just you and your value. No competitors, no noise.',
               points: [
                 'Clean, high-performance space',
-                'No ads, no competitors, no noise',
-                'Just you and your value'
+                'No ads, no competitors, no distractions',
+                'Just YOU and your work'
               ]
             },
             { 
               title: 'Mobile Optimized',
+              desc: 'More users are on mobile. Your simple site beats a messy social feed.',
               points: [
                 'More users are on mobile than ever',
-                'Social feeds are messy to screen',
+                'Social feeds are too messy',
                 'Your site makes finding you instant'
               ]
             },
             { 
               title: 'Own Your Domain',
+              desc: 'Stop renting from tech giants. Your link, your rules, forever.',
               points: [
-                'Stop renting from tech giants',
+                'Stop renting, start owning',
                 'Your link, your rules, forever',
-                'The only metric is your work quality'
+                'The only metric is work quality'
               ]
             }
           ].map((solution, idx) => (
             <div key={idx} style={{
               background: '#f9f9f9',
-              padding: '30px',
+              padding: '25px',
               borderRadius: '8px',
-              border: '2px solid #FF8C00'
+              border: '2px solid rgba(255, 140, 0, 0.3)',
+              transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
+              cursor: 'pointer',
+              boxShadow: '0 8px 20px rgba(0, 0, 0, 0.05)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-6px)';
+              e.currentTarget.style.boxShadow = '0 15px 35px rgba(255, 140, 0, 0.2)';
+              e.currentTarget.style.borderColor = 'rgba(255, 140, 0, 0.5)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.05)';
+              e.currentTarget.style.borderColor = 'rgba(255, 140, 0, 0.3)';
             }}>
               <h3 style={{
-                fontSize: 'clamp(18px, 3.5vw, 20px)',
+                fontSize: 'clamp(16px, 3vw, 18px)',
                 fontFamily: 'Oswald, sans-serif',
-                marginBottom: '20px',
-                color: '#FF8C00'
+                marginBottom: '10px',
+                color: '#FF8C00',
+                margin: '0 0 10px 0'
               }}>
-                {paw} {solution.title}
+                {solution.title}
               </h3>
+              
+              <p style={{
+                fontSize: 'clamp(13px, 2.2vw, 14px)',
+                fontFamily: 'Arvo, serif',
+                color: '#666',
+                marginBottom: '15px',
+                lineHeight: '1.5',
+                margin: '0 0 15px 0'
+              }}>
+                {solution.desc}
+              </p>
+              
               <ul style={{
                 listStyle: 'none',
                 padding: '0',
@@ -254,14 +388,15 @@ export default function Page() {
               }}>
                 {solution.points.map((point, pidx) => (
                   <li key={pidx} style={{
-                    fontSize: 'clamp(14px, 2.5vw, 15px)',
+                    fontSize: 'clamp(13px, 2.2vw, 14px)',
                     fontFamily: 'Arvo, serif',
-                    marginBottom: '10px',
+                    marginBottom: '8px',
                     color: '#666',
                     paddingLeft: '20px',
-                    position: 'relative'
+                    position: 'relative',
+                    lineHeight: '1.4'
                   }}>
-                    <span style={{ position: 'absolute', left: '0' }}>🐾</span>
+                    <span style={{ position: 'absolute', left: '0', fontSize: '16px' }}>🐾</span>
                     {point}
                   </li>
                 ))}
@@ -273,36 +408,48 @@ export default function Page() {
 
       {/* Closing Section */}
       <section style={{
-        background: 'linear-gradient(135deg, #000 0%, #333 100%)',
+        background: 'linear-gradient(135deg, #000 0%, #1a1a1a 50%, #FF8C00 100%)',
         color: 'white',
         padding: '80px 20px',
-        textAlign: 'center'
+        textAlign: 'center',
+        position: 'relative',
+        overflow: 'hidden'
       }}>
         <h2 style={{
-          fontSize: 'clamp(36px, 8vw, 72px)',
+          fontSize: 'clamp(48px, 10vw, 80px)',
           fontFamily: 'Oswald, sans-serif',
-          marginBottom: '30px',
-          letterSpacing: '2px'
+          marginBottom: '15px',
+          letterSpacing: '2px',
+          textShadow: '0 0 30px rgba(255, 140, 0, 0.5)',
+          position: 'relative',
+          zIndex: 1,
+          margin: '0 0 15px 0'
         }}>
           RM 100
         </h2>
         
         <p style={{
-          fontSize: 'clamp(18px, 4vw, 22px)',
+          fontSize: 'clamp(16px, 3vw, 18px)',
           fontFamily: 'Arvo, serif',
-          marginBottom: '30px',
-          color: '#FF8C00'
+          marginBottom: '40px',
+          color: '#FFB90F',
+          position: 'relative',
+          zIndex: 1
         }}>
           Once. That's it. No monthly fees. No subscriptions.
         </p>
 
         <div style={{
-          background: 'rgba(255, 255, 255, 0.1)',
+          background: 'rgba(255, 140, 0, 0.1)',
+          border: '2px solid rgba(255, 140, 0, 0.3)',
+          backdropFilter: 'blur(10px)',
           padding: '30px',
           borderRadius: '8px',
           maxWidth: '600px',
           margin: '0 auto 40px',
-          backdropFilter: 'blur(10px)'
+          position: 'relative',
+          zIndex: 1,
+          boxShadow: '0 8px 32px rgba(255, 140, 0, 0.1)'
         }}>
           <ul style={{
             listStyle: 'none',
@@ -311,7 +458,7 @@ export default function Page() {
             textAlign: 'left'
           }}>
             {[
-              'One single-page portfolio website',
+              'One single page portfolio website',
               'Free domain (yourname.vercel.app)',
               'Free coding service',
               'Free website template',
@@ -319,13 +466,13 @@ export default function Page() {
               'Free two minor revisions'
             ].map((item, idx) => (
               <li key={idx} style={{
-                fontSize: 'clamp(14px, 2.5vw, 16px)',
+                fontSize: 'clamp(14px, 2.3vw, 15px)',
                 fontFamily: 'Arvo, serif',
-                marginBottom: '12px',
+                marginBottom: '10px',
                 paddingLeft: '25px',
                 position: 'relative'
               }}>
-                <span style={{ position: 'absolute', left: '0' }}>🐾</span>
+                <span style={{ position: 'absolute', left: '0', fontSize: '18px' }}>🐾</span>
                 {item}
               </li>
             ))}
@@ -333,19 +480,22 @@ export default function Page() {
         </div>
 
         <p style={{
-          fontSize: 'clamp(14px, 2.5vw, 16px)',
+          fontSize: 'clamp(13px, 2.3vw, 14px)',
           fontFamily: 'Arvo, serif',
-          marginBottom: '50px',
-          opacity: '0.9'
+          marginBottom: '40px',
+          opacity: '0.9',
+          lineHeight: '1.6',
+          position: 'relative',
+          zIndex: 1
         }}>
-          That's only RM 8.30 per month and RM 0.27 a day to look professional and presentable!
+          That's only RM 8.30 per month and RM 0.27 a day to look professional!
         </p>
 
         <a href="mailto:fatcalico@gmail.com?subject=Let's Build My Portfolio Website" style={{
-          background: '#FF8C00',
-          color: 'white',
-          padding: '18px 40px',
-          fontSize: 'clamp(16px, 3vw, 18px)',
+          background: 'linear-gradient(135deg, #FF8C00, #FFB90F)',
+          color: '#000',
+          padding: '16px 40px',
+          fontSize: 'clamp(15px, 2.5vw, 16px)',
           fontFamily: 'Oswald, sans-serif',
           fontWeight: 'bold',
           border: 'none',
@@ -354,44 +504,48 @@ export default function Page() {
           textDecoration: 'none',
           display: 'inline-block',
           letterSpacing: '1px',
-          transition: 'all 0.3s ease',
-          boxShadow: '0 4px 15px rgba(255, 140, 0, 0.4)'
-        }} 
+          transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
+          boxShadow: '0 8px 30px rgba(255, 140, 0, 0.3)',
+          textTransform: 'uppercase',
+          position: 'relative',
+          zIndex: 1
+        }}
         onMouseEnter={(e) => {
-          e.target.style.background = '#FFA500';
-          e.target.style.transform = 'translateY(-2px)';
-          e.target.style.boxShadow = '0 6px 20px rgba(255, 140, 0, 0.6)';
+          e.currentTarget.style.transform = 'translateY(-3px)';
+          e.currentTarget.style.boxShadow = '0 15px 45px rgba(255, 140, 0, 0.4)';
         }}
         onMouseLeave={(e) => {
-          e.target.style.background = '#FF8C00';
-          e.target.style.transform = 'translateY(0)';
-          e.target.style.boxShadow = '0 4px 15px rgba(255, 140, 0, 0.4)';
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.boxShadow = '0 8px 30px rgba(255, 140, 0, 0.3)';
         }}>
-          {paw} START OWNING YOUR PORTFOLIO
+          {paw} Start Owning Your Portfolio
         </a>
 
         <p style={{
-          fontSize: 'clamp(14px, 2.5vw, 16px)',
+          fontSize: 'clamp(13px, 2.3vw, 14px)',
           fontFamily: 'Arvo, serif',
-          marginTop: '30px',
-          opacity: '0.8',
+          marginTop: '40px',
+          opacity: '0.85',
           maxWidth: '700px',
-          margin: '30px auto 0'
+          margin: '40px auto 0',
+          lineHeight: '1.6',
+          position: 'relative',
+          zIndex: 1
         }}>
-          Stop being just another creator profile on social media. Start being the portfolio they can't ignore.
+          Stop being just another creator profile. Start being the portfolio they can't ignore.
         </p>
       </section>
 
       {/* Footer */}
       <footer style={{
         background: '#000',
-        color: '#999',
+        color: '#666',
         padding: '30px 20px',
         textAlign: 'center',
-        fontSize: 'clamp(12px, 2vw, 14px)',
+        fontSize: 'clamp(12px, 2vw, 13px)',
         fontFamily: 'Arvo, serif'
       }}>
-        <p>Made by Fat Calico {paw} fatcalico@gmail.com</p>
+        <p style={{ margin: '0' }}>Made by Fat Calico {paw}</p>
       </footer>
     </div>
   );
