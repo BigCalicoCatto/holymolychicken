@@ -8,21 +8,25 @@ export default function Page() {
       {/* Logo Placeholder */}
       <section style={{
         background: 'linear-gradient(135deg, #FFA500 0%, #FF8C00 100%)',
-        padding: '60px 20px',
+        padding: '0',
+        margin: '0',
         textAlign: 'center',
-        minHeight: '100px',
+        minHeight: 'auto',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        width: '100%'
       }}>
         <img 
-          src="https://i.imgur.com/3QbU7Y8.png"
+          src="https://i.imgur.com/nc33SJ9.png"
           alt="Fat Calico Logo"
           style={{
-            maxWidth: '100%',
+            width: '100%',
             height: 'auto',
-            maxHeight: '120px'
+            maxHeight: '150px',
+            objectFit: 'contain',
+            display: 'block'
           }}
         />
       </section>
@@ -31,9 +35,9 @@ export default function Page() {
       <section style={{
         background: 'linear-gradient(135deg, #FFA500 0%, #FF8C00 50%, #000 100%)',
         color: 'white',
-        padding: '50px 20px',
+        padding: '25px 20px',
         textAlign: 'center',
-        minHeight: '70vh',
+        minHeight: '60vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
