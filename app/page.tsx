@@ -8,39 +8,32 @@ export default function Page() {
       {/* Logo Placeholder */}
       <section style={{
         background: 'linear-gradient(135deg, #FFA500 0%, #FF8C00 100%)',
-        padding: '80px 20px',
+        padding: '60px 20px',
         textAlign: 'center',
-        minHeight: '120px',
+        minHeight: '100px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        <div style={{ 
-          width: '100%', 
-          maxWidth: '500px',
-          height: '100px',
-          background: 'rgba(255, 140, 0, 0.1)',
-          border: '2px dashed rgba(255, 140, 0, 0.3)',
-          borderRadius: '8px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: 'rgba(255, 140, 0, 0.5)',
-          fontFamily: 'Arvo, serif',
-          fontSize: '14px'
-        }}>
-          Your Logo Image URL Here
-        </div>
+        <img 
+          src="https://i.imgur.com/3QbU7Y8.png"
+          alt="Fat Calico Logo"
+          style={{
+            maxWidth: '100%',
+            height: 'auto',
+            maxHeight: '120px'
+          }}
+        />
       </section>
 
       {/* Hero Section */}
       <section style={{
         background: 'linear-gradient(135deg, #FFA500 0%, #FF8C00 50%, #000 100%)',
         color: 'white',
-        padding: '60px 20px',
+        padding: '50px 20px',
         textAlign: 'center',
-        minHeight: '80vh',
+        minHeight: '70vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -105,7 +98,7 @@ export default function Page() {
       {/* Problems Section */}
       <section style={{
         background: 'white',
-        padding: '60px 20px',
+        padding: '50px 20px',
         maxWidth: '1200px',
         margin: '0 auto'
       }}>
@@ -225,7 +218,7 @@ export default function Page() {
       <section style={{
         background: 'linear-gradient(135deg, #FF8C00 0%, #FFA500 100%)',
         color: 'white',
-        padding: '50px 20px',
+        padding: '40px 20px',
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden'
